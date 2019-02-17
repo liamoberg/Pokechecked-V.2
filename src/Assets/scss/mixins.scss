@@ -1,0 +1,33 @@
+@import './variables.scss';
+
+@mixin unstyled-list {
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+@mixin menu-big {
+    font-size:2.6rem;
+    font-weight:600;
+    line-height:31px;
+}
+
+@mixin standard-btn {
+    font-size:1.3rem;
+    line-height:16px;
+    text-transform:uppercase;
+    padding-top:7px;
+    padding-bottom:7px;
+    padding-left:18px;
+    padding-right:19px;
+    font-weight:700;
+    border:1px solid #FFF;
+    border-radius:20px;
+    color:$white;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color:#FFF;
+        color:$violet;
+    }
+}

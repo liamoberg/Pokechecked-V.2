@@ -1,0 +1,57 @@
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/variables.scss';
+
+.header {
+    margin-top:67px;
+    display:flex;
+    flex-direction:column;
+    
+    .mainmenu {
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        margin-top:40px;
+        
+        .menu {
+            display:flex;
+            align-items:center;
+            @include unstyled-list;
+
+            li {
+                margin-right:40px;
+
+                &:last-child {
+                    margin-right:0;
+                }
+                
+                a {
+                    @include menu-big;
+                    text-transform:uppercase;
+                    color:$violet;
+
+                    &.active {
+                        color:$white;
+                    }
+                }
+            }
+        }
+
+        .select {
+            display:flex;
+            align-items:center;
+            @include unstyled-list;
+
+            li {
+                margin-right:20px;
+
+                &:last-child {
+                    margin-right:0;
+                }
+
+                a {
+                    @include standard-btn;
+                }
+            }
+        }
+    }
+}

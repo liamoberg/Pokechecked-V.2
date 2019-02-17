@@ -1,0 +1,53 @@
+.header {
+  margin-top: 67px;
+  display: flex;
+  flex-direction: column; }
+  .header .mainmenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px; }
+    .header .mainmenu .menu {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+      .header .mainmenu .menu li {
+        margin-right: 40px; }
+        .header .mainmenu .menu li:last-child {
+          margin-right: 0; }
+        .header .mainmenu .menu li a {
+          font-size: 2.6rem;
+          font-weight: 600;
+          line-height: 31px;
+          text-transform: uppercase;
+          color: #5C469A; }
+          .header .mainmenu .menu li a.active {
+            color: #FCFCFC; }
+    .header .mainmenu .select {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+      .header .mainmenu .select li {
+        margin-right: 20px; }
+        .header .mainmenu .select li:last-child {
+          margin-right: 0; }
+        .header .mainmenu .select li a {
+          font-size: 1.3rem;
+          line-height: 16px;
+          text-transform: uppercase;
+          padding-top: 7px;
+          padding-bottom: 7px;
+          padding-left: 18px;
+          padding-right: 19px;
+          font-weight: 700;
+          border: 1px solid #FFF;
+          border-radius: 20px;
+          color: #FCFCFC;
+          transition: all .3s ease; }
+          .header .mainmenu .select li a:hover {
+            background-color: #FFF;
+            color: #5C469A; }
