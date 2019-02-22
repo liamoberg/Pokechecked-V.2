@@ -1,8 +1,30 @@
+@import './Assets/scss/variables.scss';
+
 .wrapper {
     min-height:100vh;
 
     .container {
         width:90%;
         margin:0 auto;
+    }
+}
+
+.standard-btn {
+    display:block;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    border:1px solid #FFF;
+    border-radius: 20px;
+    padding-bottom:8px;
+    padding-top:7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition:all .3s ease;
+
+    &:hover {
+        background-color:#FFF;
+        color:$violet;
     }
 }
