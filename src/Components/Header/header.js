@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import './header.css';
 
+import {
+    NavLink
+  } from 'react-router-dom';
+
 class Header extends Component {
+
+
     render () {
+
+
         return (
             <header className="header">
             <svg width="150" height="60" viewBox="0 0 150 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10,10 +18,10 @@ class Header extends Component {
             </svg>
             <nav className="mainmenu">
                 <ul className="menu">
-                    <li><a className="active" href="#">Games</a></li>
-                    <li><a href="#">Standings</a></li>
-                    <li><a href="#">Goalies</a></li>
-                    <li><a href="#">Playoffs</a></li>
+                    <li><NavLink to="/" activeClassName="active" exact>home</NavLink></li>
+                    <li><NavLink to="/standings" activeClassName="active">standings</NavLink></li>
+                    <li><NavLink to="/goalies" activeClassName="active">Goalies</NavLink></li>
+                    <li><NavLink to="/playoffs" activeClassName="active">Playoffs</NavLink></li>
                 </ul>
                 <ul className="select">
                     <li><a href="#">last 5 days</a></li>

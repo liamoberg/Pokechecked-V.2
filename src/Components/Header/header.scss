@@ -29,6 +29,11 @@
                     @include menu-big;
                     text-transform:uppercase;
                     color:$violet;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        color:$white;
+                    }
 
                     &.active {
                         color:$white;

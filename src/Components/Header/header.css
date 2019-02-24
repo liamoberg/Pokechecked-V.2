@@ -23,7 +23,10 @@
           font-weight: 600;
           line-height: 31px;
           text-transform: uppercase;
-          color: #5C469A; }
+          color: #5C469A;
+          transition: all .3s ease; }
+          .header .mainmenu .menu li a:hover {
+            color: #FCFCFC; }
           .header .mainmenu .menu li a.active {
             color: #FCFCFC; }
     .header .mainmenu .select {

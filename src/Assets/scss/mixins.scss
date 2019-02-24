@@ -12,6 +12,12 @@
     line-height:31px;
 }
 
+@mixin standard-bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 @mixin standard-btn {
     font-size:1.3rem;
     line-height:16px;

@@ -1,0 +1,40 @@
+.table-wrap {
+  display: block; }
+  .table-wrap .big-title {
+    display: block;
+    font-family: "Zilla Slab", serif;
+    font-weight: 600;
+    font-size: 2.8rem; }
+  .table-wrap table {
+    width: 100%;
+    border-collapse: collapse; }
+    .table-wrap table th {
+      font-family: "Zilla Slab", serif;
+      font-size: 1.9rem;
+      text-align: left; }
+      .table-wrap table th.title {
+        font-size: 2.4rem; }
+    .table-wrap table td {
+      font-size: 1.8rem; }
+    .table-wrap table tr {
+      display: table-row;
+      position: relative;
+      height: 60px; }
+      .table-wrap table tr:nth-child(1) {
+        border-bottom: 1px solid rgba(92, 70, 154, 0.7); }
+      .table-wrap table tr:nth-child(2n+3) {
+        background-image: linear-gradient(270deg, rgba(20, 9, 51, 0.1) 0%, rgba(20, 9, 51, 0.8) 19.89%, #140933 50.28%, rgba(20, 9, 51, 0.8) 79.56%, rgba(20, 9, 51, 0.1) 100%); }
+    .table-wrap table .team {
+      padding-left: 60px;
+      position: relative; }
+      .table-wrap table .team:before {
+        content: '';
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../../Assets/images/tampa.svg);
+        left: 15px;
+        top: 15px;
+        width: 30px;
+        height: 30px; }

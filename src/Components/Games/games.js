@@ -10,7 +10,7 @@ class Games extends Component {
         let games = [];
 
         for (let i = 0; i < 4; i++) {
-            games.push(            <div className="game">
+            games.push(<div className="game">
             <div className="hometeam">
                 <img src={Logo1} alt="123"/>
                 <span>Edmonton Oilers</span>

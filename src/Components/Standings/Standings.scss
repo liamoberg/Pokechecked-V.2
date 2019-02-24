@@ -1,0 +1,72 @@
+@import '../../Assets/scss/fonts.scss';
+@import '../../Assets/scss/mixins.scss';
+
+.table-wrap {
+    display:block;
+
+    .big-title {
+        display:block;
+        font-family: $font-alt;
+        font-weight: 600;
+        font-size: 2.8rem;
+    }
+
+    table {
+        width:100%;
+        border-collapse: collapse;
+        th {
+            font-family: $font-alt;
+            font-size: 1.9rem;
+            text-align: left;
+
+            &.title {
+               font-size: 2.4rem; 
+            }
+        }
+
+        td {
+            font-size: 1.8rem;
+        }
+
+        tr {
+            display: table-row;
+            position: relative;
+            height: 60px;
+
+            &:nth-child(1) {
+                border-bottom:1px solid rgba(92, 70, 154, .7);
+            }
+
+            &:nth-child(2n+3) {
+                background-image:linear-gradient(270deg, rgba(20, 9, 51, 0.1) 0%, rgba(20, 9, 51, 0.8) 19.89%, #140933 50.28%, rgba(20, 9, 51, 0.8) 79.56%, rgba(20, 9, 51, 0.1) 100%);
+                // &:after {
+                //     content:'';
+                //     position: absolute;
+                //     left:0; 
+                //     top:0;
+                //     z-index: -1;
+                //     width:100%;
+                //     height: 100%;
+                //     background-image:linear-gradient(270deg, rgba(20, 9, 51, 0.1) 0%, rgba(20, 9, 51, 0.8) 19.89%, #140933 50.28%, rgba(20, 9, 51, 0.8) 79.56%, rgba(20, 9, 51, 0.1) 100%);
+                //     opacity: .4;
+                // }
+            }
+        }
+
+        .team {
+            padding-left: 60px;
+            position: relative;
+
+            &:before {
+                content:'';
+                position: absolute;
+                @include standard-bg;
+                background-image:url(../../Assets/images/tampa.svg);
+                left:15px;
+                top:15px;
+                width:30px;
+                height: 30px;
+            }
+        }
+    }
+}
