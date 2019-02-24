@@ -1,0 +1,13 @@
+.divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px; }
+  .divider .line {
+    width: 80%;
+    border: 1px solid #5C469A;
+    opacity: 0.7; }
+  .divider .date {
+    font-family: "Zilla Slab", serif;
+    font-size: 1.8rem; }

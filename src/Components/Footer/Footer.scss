@@ -1,69 +1,67 @@
-@import '../../Assets/scss/variables.scss';
-@import '../../Assets/scss/mixins.scss';
-@import '../../Assets/scss/fonts.scss';
-
+@import "../../Assets/scss/variables.scss";
+@import "../../Assets/scss/mixins.scss";
+@import "../../Assets/scss/fonts.scss";
 
 .footer {
-    position: relative;
-    padding-top:40px;
-    margin-top:100px;
-    padding-bottom: 85px;
-    display:flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  position: relative;
+  padding-top: 40px;
+  margin-top: 100px;
+  padding-bottom: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 
-    &:before {
-        content:'';
-        position: absolute;
-        left:0;
-        top:0;
-        width: 100%;
-        border: 1px solid #5C469A;
-        opacity: .7;
-    }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: 1px solid #5c469a;
+    opacity: 0.7;
+  }
 
-    span {
-        font-family: $font-alt;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: normal; 
-        text-align: right;
-    }
- 
+  span {
+    font-family: $font-alt;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: normal;
+    text-align: right;
+  }
 
-    ul {
-        @include unstyled-list;
-        display:flex;
-        flex-flow: row  wrap;
+  ul {
+    @include unstyled-list;
+    display: flex;
+    flex-flow: row wrap;
 
-        li {
-            margin-right: 30px;
-            &:last-child {
-                margin-right: 0;
-            }
+    li {
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
 
-            a {
-                padding-left: 35px;
-                padding-right: 14px;
-                position: relative;;
+      a {
+        padding-left: 35px;
+        padding-right: 14px;
+        position: relative;
 
-                svg {
-                    position: absolute;
-                    left:12px;
-                    top:50%;
-                    transform:translateY(-50%);
-                    path {
-                        transition:all .3s ease;
-                    }
-                }
-                &:hover {
-                    svg {
-                        path {
-                            fill:$violet;
-                        }
-                    }
-                }
-            }
+        svg {
+          position: absolute;
+          left: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          path {
+            transition: all 0.3s ease;
+          }
         }
+        &:hover {
+          svg {
+            path {
+              fill: $violet;
+            }
+          }
+        }
+      }
     }
+  }
 }

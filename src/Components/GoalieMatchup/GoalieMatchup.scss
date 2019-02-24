@@ -1,0 +1,65 @@
+@import "../../Assets/scss/fonts.scss";
+
+.goalie-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  margin-right: 25px;
+
+  .home-goalie,
+  .away-goalie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .img-wrap {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .team {
+      opacity: 0.4;
+    }
+
+    .goalie {
+      border-radius: 100%;
+    }
+
+    .name {
+      font-family: $font-alt;
+      font-weight: 500;
+      font-size: 1.4rem;
+    }
+  }
+
+  .home-goalie {
+    margin-right: 20px;
+    .goalie {
+      margin-left: 50px;
+    }
+
+    .team {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+  }
+
+  .away-goalie {
+    .img-wrap {
+      .goalie {
+        margin-right: 50px;
+      }
+
+      .team {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+      }
+    }
+  }
+}

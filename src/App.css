@@ -1,7 +1,7 @@
 .wrapper {
   min-height: 100vh; }
   .wrapper .container {
-    width: 90%;
+    width: 1740px;
     margin: 0 auto; }
 
 .standard-btn {
@@ -10,13 +10,13 @@
   font-size: 1.3rem;
   font-weight: 700;
   text-align: center;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   border-radius: 20px;
   padding-bottom: 8px;
   padding-top: 7px;
   padding-left: 10px;
   padding-right: 10px;
-  transition: all .3s ease; }
+  transition: all 0.3s ease; }
   .standard-btn:hover {
-    background-color: #FFF;
+    background-color: #fff;
     color: #5C469A; }

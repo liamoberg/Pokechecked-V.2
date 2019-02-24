@@ -7,13 +7,13 @@
   justify-content: space-between;
   align-items: flex-start; }
   .footer:before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    border: 1px solid #5C469A;
-    opacity: .7; }
+    border: 1px solid #5c469a;
+    opacity: 0.7; }
   .footer span {
     font-family: "Zilla Slab", serif;
     font-weight: 600;
@@ -25,7 +25,7 @@
     margin: 0;
     list-style: none;
     display: flex;
-    flex-flow: row  wrap; }
+    flex-flow: row wrap; }
     .footer ul li {
       margin-right: 30px; }
       .footer ul li:last-child {
@@ -40,6 +40,6 @@
           top: 50%;
           transform: translateY(-50%); }
           .footer ul li a svg path {
-            transition: all .3s ease; }
+            transition: all 0.3s ease; }
         .footer ul li a:hover svg path {
           fill: #5C469A; }

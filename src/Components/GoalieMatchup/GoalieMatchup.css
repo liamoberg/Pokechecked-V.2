@@ -1,0 +1,43 @@
+.goalie-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  margin-right: 25px; }
+  .goalie-container .home-goalie,
+  .goalie-container .away-goalie {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .goalie-container .home-goalie .img-wrap,
+    .goalie-container .away-goalie .img-wrap {
+      position: relative;
+      margin-bottom: 15px; }
+    .goalie-container .home-goalie .team,
+    .goalie-container .away-goalie .team {
+      opacity: 0.4; }
+    .goalie-container .home-goalie .goalie,
+    .goalie-container .away-goalie .goalie {
+      border-radius: 100%; }
+    .goalie-container .home-goalie .name,
+    .goalie-container .away-goalie .name {
+      font-family: "Zilla Slab", serif;
+      font-weight: 500;
+      font-size: 1.4rem; }
+  .goalie-container .home-goalie {
+    margin-right: 20px; }
+    .goalie-container .home-goalie .goalie {
+      margin-left: 50px; }
+    .goalie-container .home-goalie .team {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1; }
+  .goalie-container .away-goalie .img-wrap .goalie {
+    margin-right: 50px; }
+  .goalie-container .away-goalie .img-wrap .team {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1; }
