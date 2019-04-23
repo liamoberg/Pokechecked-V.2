@@ -14,8 +14,8 @@ class Playbtn extends Component {
         <g filter="url(#filter0_d)">
           <path
             id="1"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M19 28.3913C25.8435 28.3913 31.3913 22.8435 31.3913 16C31.3913 9.15647 25.8435 3.6087 19 3.6087C12.1565 3.6087 6.6087 9.15647 6.6087 16C6.6087 22.8435 12.1565 28.3913 19 28.3913ZM19 31C27.2843 31 34 24.2843 34 16C34 7.71573 27.2843 1 19 1C10.7157 1 4 7.71573 4 16C4 24.2843 10.7157 31 19 31Z"
             fill="white"
           />
@@ -33,9 +33,9 @@ class Playbtn extends Component {
             width="38"
             height="38"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"

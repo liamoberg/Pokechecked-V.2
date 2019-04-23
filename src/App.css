@@ -1,8 +1,13 @@
 .wrapper {
   min-height: 100vh; }
-  .wrapper .container {
-    width: 1740px;
-    margin: 0 auto; }
+
+.container {
+  width: 1740px;
+  margin: 0 auto;
+  position: relative; }
+  @media screen and (max-width: 1440px) {
+    .container {
+      width: 1200px; } }
 
 .standard-btn {
   display: block;

@@ -8,6 +8,9 @@
     width: 80%;
     border: 1px solid #5C469A;
     opacity: 0.7; }
+    @media screen and (max-width: 1440px) {
+      .divider .line {
+        width: 920px; } }
   .divider .date {
     font-family: "Zilla Slab", serif;
     font-size: 1.8rem; }

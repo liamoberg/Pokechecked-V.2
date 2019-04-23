@@ -4,6 +4,7 @@ import Games from "../../Games/games";
 import { client } from "../../../Environment/apollo";
 import gql from "graphql-tag";
 import DayDivider from "../../DayDivider/DayDivider";
+import VideoOverlay from "../../VideoOverlay/VideoOverlay";
 
 const getHighlights = async () => {
   const {
@@ -41,16 +42,21 @@ class HomePage extends Component {
   async componentDidMount() {
     const dividers = await getHighlights();
     this.setState({ data: dividers });
-    console.log(this.state.data);
+    console.log(this.state);
+  }
+
+  parseDate = (date) => {
+    return date.slice(0, -7);
   }
 
   render() {
     return (
-      <div>
+      <div className="allgameswrap">
         {this.state.data.map((highlight, index) => {
           return (
             <div className="gameday">
-              <DayDivider day={highlight.day} />
+              <VideoOverlay />
+              <DayDivider day={this.parseDate(highlight.day)} />
               <Games games={highlight.games} />
             </div>
           );

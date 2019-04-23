@@ -18,6 +18,21 @@
     background-repeat: no-repeat;
 }
 
+@mixin absolute-center {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
+@mixin filler {
+    position: absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    width:100%;
+}
+
 @mixin standard-btn {
     font-size:1.3rem;
     line-height:16px;
@@ -35,5 +50,24 @@
     &:hover {
         background-color:#FFF;
         color:$violet;
+    }
+}
+
+// Media query variables
+
+$lg : 1740px;
+$md : 1440px;
+$sm : 1200px;
+$tablet: 1024px;
+
+@mixin lg {
+    @media screen and (max-width:$lg) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (max-width:$md) {
+        @content;
     }
 }

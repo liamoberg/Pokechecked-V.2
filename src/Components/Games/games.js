@@ -6,15 +6,17 @@ import Playbtn from "../SVG components/playbtn";
 import DayDivider from "../DayDivider/DayDivider";
 
 class Games extends Component {
+
   render() {
     return (
       <div className="gameWrapper">
         {this.props.games.map(game => (
           <div className="game">
-            <div className="hometeam">
+          <div className="top">
+          <div className="hometeam">
               <img src={Logo1} alt="123" />
               <span>{game.homeTeam}</span>
-            </div>
+          </div>
             <div className="resultwrap">
               <Playbtn />
               <a href="#" className="standard-btn">
@@ -25,6 +27,10 @@ class Games extends Component {
               <img src={Logo2} alt="123" />
               <span>{game.awayTeam}</span>
             </div>
+          </div>
+          <div className="bottom">
+            <span className="result">{game.homeGoals} - {game.awayGoals}</span>
+          </div>
           </div>
         ))}
       </div>

@@ -1,0 +1,27 @@
+@import "../../Assets/scss/mixins.scss";
+
+.VideoOverlay {
+    // display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100vw;
+    height: 100vh;
+    z-index: 999;
+
+    > div {
+        background-color: rgba(0,0,0,.9) !important;
+    }
+
+    svg {
+        &:nth-child(2), &:nth-child(3) {
+            display:none !important;
+        }
+    }
+
+    .overlay {
+        @include filler;
+        background-color:rgba(0,0,0,.5);
+        z-index: -1;
+    }
+}

@@ -1,11 +1,17 @@
 @import "./Assets/scss/variables.scss";
+@import "./Assets/scss/mixins.scss";
 
 .wrapper {
   min-height: 100vh;
+}
 
-  .container {
-    width: 1740px;
-    margin: 0 auto;
+.container {
+  width: 1740px;
+  margin: 0 auto;
+  position: relative;
+
+  @include md {
+    width:1200px;
   }
 }
 
