@@ -5,8 +5,7 @@
   .gameday .gameWrapper {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between; }
+    flex-wrap: wrap; }
     .gameday .gameWrapper .game {
       display: flex;
       flex-direction: column;
@@ -16,7 +15,7 @@
         position: relative;
         display: flex;
         justify-content: center;
-        align-items: flex-start; }
+        align-items: flex-end; }
         .gameday .gameWrapper .game .top .resultwrap {
           display: flex;
           justify-content: center;

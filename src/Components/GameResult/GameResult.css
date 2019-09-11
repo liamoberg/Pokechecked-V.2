@@ -1,0 +1,38 @@
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+  .result .score {
+    display: flex;
+    justify-content: center; }
+  .result .scorers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .result .scorers .item {
+      display: flex;
+      font-family: "Zilla Slab", serif;
+      margin-bottom: 10px; }
+      .result .scorers .item .time {
+        width: 30px;
+        color: #8975c0;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+      .result .scorers .item .left,
+      .result .scorers .item .right {
+        text-align: right;
+        width: calc(50% - 15px);
+        padding-right: 10px;
+        padding-left: 10px; }
+        .result .scorers .item .left .assists,
+        .result .scorers .item .right .assists {
+          font-weight: 400; }
+          .result .scorers .item .left .assists > span:first-child,
+          .result .scorers .item .right .assists > span:first-child {
+            margin-left: 0 !important; }
+          .result .scorers .item .left .assists > span:last-child,
+          .result .scorers .item .right .assists > span:last-child {
+            margin-left: 5px; }

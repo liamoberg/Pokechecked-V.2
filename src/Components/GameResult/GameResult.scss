@@ -1,0 +1,55 @@
+@import "../../Assets/scss/fonts.scss";
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .score {
+    display: flex;
+    justify-content: center;
+  }
+
+  .scorers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .item {
+      display: flex;
+      font-family: $font-alt;
+      margin-bottom: 10px;
+
+      .time {
+        width: 30px;
+        color: #8975c0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .left,
+      .right {
+        text-align: right;
+        width: calc(50% - 15px);
+        padding-right: 10px;
+        padding-left: 10px;
+
+        .assists {
+          font-weight: 400;
+
+          > span {
+            &:first-child {
+              margin-left: 0 !important;
+            }
+
+            &:last-child {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

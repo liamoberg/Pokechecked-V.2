@@ -11,7 +11,7 @@
   position: relative;
 
   @include md {
-    width:1200px;
+    width: 1200px;
   }
 }
 
@@ -28,6 +28,11 @@
   padding-left: 10px;
   padding-right: 10px;
   transition: all 0.3s ease;
+
+  &.active {
+    background-color: #fff;
+    color: $violet;
+  }
 
   &:hover {
     background-color: #fff;
