@@ -77,7 +77,7 @@ class HomePage extends Component {
   }
 
   showAllResults() {
-    if (!this.state.showAllResults === true) {
+    if (this.state.showAllResults === false) {
       this.setState({ showAllResults: true });
     } else {
       this.setState({ showAllResults: false });

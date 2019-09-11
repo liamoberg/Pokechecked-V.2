@@ -11,19 +11,20 @@ class Games extends Component {
     showResult: false
   };
 
-  componentWillReceiveProps() {
-    if (this.props.showAllResults === true) {
+  showResult() {
+    if (!this.state.showResult === true) {
       this.setState({ showResult: true });
     } else {
       this.setState({ showResult: false });
     }
   }
 
-  showResult() {
-    if (!this.state.showResult === true) {
-      this.setState({ showResult: true });
-    } else {
-      this.setState({ showResult: false });
+  // Implement another method
+  componentWillReceiveProps(nextProps) {
+    if (this.props !== nextProps) {
+      this.setState({
+        showResult: nextProps.showAllResults
+      });
     }
   }
 
@@ -70,14 +71,3 @@ class Games extends Component {
 }
 
 export default Games;
-
-// {
-//   this.state.data.map((highlight, index) => {
-//     return (
-//       <div>
-//         <DayDivider day={highlight.day} />
-//         <Games games={highlight.games} />
-//       </div>
-//     );
-//   });
-// }
