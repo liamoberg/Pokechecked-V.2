@@ -51,3 +51,24 @@
           display: block;
           font-weight: 700;
           font-size: 13px; }
+
+.three-stars {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px; }
+  .three-stars .star {
+    display: Flex;
+    flex-direction: column;
+    align-items: center; }
+    .three-stars .star:nth-child(1) .stars svg:nth-child(2), .three-stars .star:nth-child(1) .stars svg:nth-child(3) {
+      display: none; }
+    .three-stars .star:nth-child(2) .stars svg:nth-child(3) {
+      display: none; }
+    .three-stars .star img {
+      height: 45px;
+      width: 45px;
+      border-radius: 100%; }
+    .three-stars .star .stars {
+      margin-top: 5px;
+      display: flex;
+      justify-content: center; }

@@ -4,7 +4,6 @@ import Logo1 from "../../Assets/images/sprite-large.png";
 import Logo2 from "../../Assets/images/sprite-large-1.png";
 import VideoOverlay from "../VideoOverlay/VideoOverlay";
 import GameResult from "../GameResult/GameResult";
-import DayDivider from "../DayDivider/DayDivider";
 
 class Games extends Component {
   state = {
@@ -62,6 +61,7 @@ class Games extends Component {
               homeTeamScore={this.props.games.homeGoals}
               awayTeamScore={this.props.games.awayGoals}
               scorers={this.props.games.scorers}
+              stars={this.props.games.stars}
             />
           )}
         </div>

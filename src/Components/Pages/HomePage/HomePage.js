@@ -29,6 +29,7 @@ const getHighlights = async () => {
               fullName
               id
               position
+              image
             }
             scorers {
               assist {

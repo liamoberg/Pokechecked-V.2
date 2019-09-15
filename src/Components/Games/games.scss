@@ -73,3 +73,47 @@
     }
   }
 }
+
+.three-stars {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  .star {
+    display: Flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(1) {
+      .stars {
+        svg {
+          &:nth-child(2),
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .stars {
+        svg {
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    img {
+      height: 45px;
+      width: 45px;
+      border-radius: 100%;
+    }
+
+    .stars {
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
