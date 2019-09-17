@@ -1,0 +1,80 @@
+@import "../../../Assets/scss/fonts.scss";
+@import "../../../Assets/scss/mixins.scss";
+
+.playoffs {
+  > span {
+    display: block;
+    font-family: $font-alt;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .bracket {
+    display: flex;
+
+    .left-side,
+    .right-side {
+      width: 50%;
+      display: flex;
+
+      .four,
+      .two {
+        display: flex;
+        flex-direction: column;
+
+        .game {
+          position: relative;
+
+          svg {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) translateX(calc(100% + 25px));
+          }
+
+          .top,
+          .bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+              max-width: 105px;
+              margin-bottom: 10px;
+            }
+
+            span {
+              font-family: $font-alt;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .four {
+        margin-right: 120px;
+        .game {
+          margin-bottom: 40px;
+
+          .top {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .two {
+        margin-top: 60px;
+
+        .game {
+          margin-bottom: 160px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .top {
+            margin-bottom: 185px;
+          }
+        }
+      }
+    }
+  }
+}
