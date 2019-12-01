@@ -8,76 +8,203 @@
   display: flex; }
   .playoffs .bracket .left-side,
   .playoffs .bracket .right-side {
+    position: relative;
     width: 50%;
     display: flex; }
+    .playoffs .bracket .left-side .team-logo,
+    .playoffs .bracket .right-side .team-logo {
+      background-image: url(../../../Assets/images/sprite-big.png);
+      height: 100px;
+      width: 100px;
+      margin-bottom: 10px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .playoffs .bracket .left-side .divider-one,
+    .playoffs .bracket .right-side .divider-one {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) translateX(100%);
+      height: 60%;
+      width: 30px;
+      border-bottom: 1px solid #5c469a;
+      border-top: 1px solid #5c469a;
+      border-right: 1px solid #5c469a; }
+      .playoffs .bracket .left-side .divider-one:after,
+      .playoffs .bracket .right-side .divider-one:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) translateX(100%);
+        height: 1px;
+        width: 30px;
+        background-color: #5c469a; }
+    .playoffs .bracket .left-side .final,
+    .playoffs .bracket .right-side .final {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .playoffs .bracket .left-side .final img,
+      .playoffs .bracket .right-side .final img {
+        margin-bottom: 10px; }
+      .playoffs .bracket .left-side .final span,
+      .playoffs .bracket .right-side .final span {
+        font-family: "Zilla Slab", serif; }
     .playoffs .bracket .left-side .four,
     .playoffs .bracket .left-side .two,
+    .playoffs .bracket .left-side .one,
     .playoffs .bracket .right-side .four,
-    .playoffs .bracket .right-side .two {
+    .playoffs .bracket .right-side .two,
+    .playoffs .bracket .right-side .one {
       display: flex;
       flex-direction: column; }
       .playoffs .bracket .left-side .four .game,
       .playoffs .bracket .left-side .two .game,
+      .playoffs .bracket .left-side .one .game,
       .playoffs .bracket .right-side .four .game,
-      .playoffs .bracket .right-side .two .game {
+      .playoffs .bracket .right-side .two .game,
+      .playoffs .bracket .right-side .one .game {
         position: relative; }
         .playoffs .bracket .left-side .four .game svg,
         .playoffs .bracket .left-side .two .game svg,
+        .playoffs .bracket .left-side .one .game svg,
         .playoffs .bracket .right-side .four .game svg,
-        .playoffs .bracket .right-side .two .game svg {
+        .playoffs .bracket .right-side .two .game svg,
+        .playoffs .bracket .right-side .one .game svg {
           position: absolute;
           right: 0;
           top: 50%;
-          transform: translateY(-50%) translateX(calc(100% + 25px)); }
+          transform: translateY(-50%) translateX(calc(100% + 5px)); }
         .playoffs .bracket .left-side .four .game .top,
         .playoffs .bracket .left-side .four .game .bottom,
+        .playoffs .bracket .left-side .four .game .one,
         .playoffs .bracket .left-side .two .game .top,
         .playoffs .bracket .left-side .two .game .bottom,
+        .playoffs .bracket .left-side .two .game .one,
+        .playoffs .bracket .left-side .one .game .top,
+        .playoffs .bracket .left-side .one .game .bottom,
+        .playoffs .bracket .left-side .one .game .one,
         .playoffs .bracket .right-side .four .game .top,
         .playoffs .bracket .right-side .four .game .bottom,
+        .playoffs .bracket .right-side .four .game .one,
         .playoffs .bracket .right-side .two .game .top,
-        .playoffs .bracket .right-side .two .game .bottom {
+        .playoffs .bracket .right-side .two .game .bottom,
+        .playoffs .bracket .right-side .two .game .one,
+        .playoffs .bracket .right-side .one .game .top,
+        .playoffs .bracket .right-side .one .game .bottom,
+        .playoffs .bracket .right-side .one .game .one {
           display: flex;
           flex-direction: column;
           align-items: center; }
           .playoffs .bracket .left-side .four .game .top img,
           .playoffs .bracket .left-side .four .game .bottom img,
+          .playoffs .bracket .left-side .four .game .one img,
           .playoffs .bracket .left-side .two .game .top img,
           .playoffs .bracket .left-side .two .game .bottom img,
+          .playoffs .bracket .left-side .two .game .one img,
+          .playoffs .bracket .left-side .one .game .top img,
+          .playoffs .bracket .left-side .one .game .bottom img,
+          .playoffs .bracket .left-side .one .game .one img,
           .playoffs .bracket .right-side .four .game .top img,
           .playoffs .bracket .right-side .four .game .bottom img,
+          .playoffs .bracket .right-side .four .game .one img,
           .playoffs .bracket .right-side .two .game .top img,
-          .playoffs .bracket .right-side .two .game .bottom img {
-            max-width: 105px;
+          .playoffs .bracket .right-side .two .game .bottom img,
+          .playoffs .bracket .right-side .two .game .one img,
+          .playoffs .bracket .right-side .one .game .top img,
+          .playoffs .bracket .right-side .one .game .bottom img,
+          .playoffs .bracket .right-side .one .game .one img {
+            max-width: 70px;
             margin-bottom: 10px; }
           .playoffs .bracket .left-side .four .game .top span,
           .playoffs .bracket .left-side .four .game .bottom span,
+          .playoffs .bracket .left-side .four .game .one span,
           .playoffs .bracket .left-side .two .game .top span,
           .playoffs .bracket .left-side .two .game .bottom span,
+          .playoffs .bracket .left-side .two .game .one span,
+          .playoffs .bracket .left-side .one .game .top span,
+          .playoffs .bracket .left-side .one .game .bottom span,
+          .playoffs .bracket .left-side .one .game .one span,
           .playoffs .bracket .right-side .four .game .top span,
           .playoffs .bracket .right-side .four .game .bottom span,
+          .playoffs .bracket .right-side .four .game .one span,
           .playoffs .bracket .right-side .two .game .top span,
-          .playoffs .bracket .right-side .two .game .bottom span {
+          .playoffs .bracket .right-side .two .game .bottom span,
+          .playoffs .bracket .right-side .two .game .one span,
+          .playoffs .bracket .right-side .one .game .top span,
+          .playoffs .bracket .right-side .one .game .bottom span,
+          .playoffs .bracket .right-side .one .game .one span {
             font-family: "Zilla Slab", serif;
             font-size: 14px; }
     .playoffs .bracket .left-side .four,
     .playoffs .bracket .right-side .four {
-      margin-right: 120px; }
+      margin-right: 60px; }
       .playoffs .bracket .left-side .four .game,
       .playoffs .bracket .right-side .four .game {
-        margin-bottom: 40px; }
+        margin-bottom: 40px;
+        min-width: 133px; }
         .playoffs .bracket .left-side .four .game .top,
         .playoffs .bracket .right-side .four .game .top {
           margin-bottom: 20px; }
     .playoffs .bracket .left-side .two,
     .playoffs .bracket .right-side .two {
-      margin-top: 60px; }
+      margin-top: 60px;
+      margin-right: 50px; }
       .playoffs .bracket .left-side .two .game,
       .playoffs .bracket .right-side .two .game {
-        margin-bottom: 160px; }
+        margin-bottom: 160px;
+        min-width: 118px;
+        min-height: 328px; }
+        .playoffs .bracket .left-side .two .game .divider-one,
+        .playoffs .bracket .right-side .two .game .divider-one {
+          height: 70%; }
         .playoffs .bracket .left-side .two .game:last-child,
         .playoffs .bracket .right-side .two .game:last-child {
           margin-bottom: 0; }
         .playoffs .bracket .left-side .two .game .top,
         .playoffs .bracket .right-side .two .game .top {
-          margin-bottom: 185px; }
+          margin-bottom: 145px; }
+    .playoffs .bracket .left-side .one,
+    .playoffs .bracket .right-side .one {
+      margin-top: 175px; }
+      .playoffs .bracket .left-side .one .game,
+      .playoffs .bracket .right-side .one .game {
+        min-width: 118px;
+        min-height: 585px; }
+        .playoffs .bracket .left-side .one .game .top,
+        .playoffs .bracket .right-side .one .game .top {
+          margin-bottom: 400px; }
+        .playoffs .bracket .left-side .one .game .divider-one,
+        .playoffs .bracket .right-side .one .game .divider-one {
+          height: 82%; }
+  .playoffs .bracket .left-side .final {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -125%); }
+  .playoffs .bracket .right-side {
+    flex-direction: row-reverse; }
+    .playoffs .bracket .right-side .final {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, 0%); }
+    .playoffs .bracket .right-side .four {
+      margin-right: 0;
+      margin-left: 60px; }
+    .playoffs .bracket .right-side .two {
+      margin-right: 0;
+      margin-left: 60px; }
+    .playoffs .bracket .right-side .divider-one {
+      right: auto;
+      left: 0;
+      transform: translateY(-50%) translateX(-100%) rotate(180deg); }
+    .playoffs .bracket .right-side .four .game svg,
+    .playoffs .bracket .right-side .two .game svg,
+    .playoffs .bracket .right-side .one .game svg {
+      right: auto;
+      left: 0;
+      transform: translateX(calc(-100% - 25px)) translateY(-50%) rotate(180deg); }

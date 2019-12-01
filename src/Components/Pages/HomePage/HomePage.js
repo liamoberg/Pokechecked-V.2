@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React, { useState, useEffect, Component } from "react";
 import "./HomePage.css";
-import Games from "../../Games/games";
+import GameDay from "../../../Components/GameDay/GameDay";
+import AllTeams from "../../../Components/AllTeams/AllTeams";
 import { client } from "../../../Environment/apollo";
 import gql from "graphql-tag";
-import DayDivider from "../../DayDivider/DayDivider";
-import GameResult from "../../GameResult/GameResult";
 
 const getHighlights = async () => {
   const {
@@ -12,7 +11,7 @@ const getHighlights = async () => {
   } = await client.query({
     query: gql`
       {
-        fetchHighlights(from: "2018-10-06", to: "2018-10-07") {
+        fetchHighlights(from: "2018-10-06", to: "2018-10-10") {
           day
           games {
             homeTeam
@@ -65,61 +64,32 @@ const getHighlights = async () => {
   return fetchHighlights;
 };
 
-class HomePage extends Component {
-  constructor() {
-    super();
-    this.state = { data: [], showAllResults: false };
-  }
+function HomePage() {
+  const [data, setData] = useState([{ day: "", games: [] }]);
 
-  async componentDidMount() {
-    const dividers = await getHighlights();
-    this.setState({ data: dividers });
-    console.log(this.state);
-  }
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getHighlights();
+      setData(result);
+    };
+    fetchData();
+  }, []);
 
-  showAllResults() {
-    if (this.state.showAllResults === false) {
-      this.setState({ showAllResults: true });
-    } else {
-      this.setState({ showAllResults: false });
-    }
-  }
+  // console.log(data);
 
-  parseDate = date => {
-    return date.slice(0, -7);
-  };
-
-  render() {
-    return (
-      <div className="allgameswrap">
-        {this.state.data.map((highlight, index) => {
-          return (
-            <div className="gameday">
-              <div className="divider">
-                <DayDivider day={this.parseDate(highlight.day)} />
-                <div
-                  className="standard-btn"
-                  onClick={() => {
-                    this.showAllResults();
-                  }}
-                >
-                  Results
-                </div>
-              </div>
-              <div className="gameWrapper">
-                {highlight.games.map(game => (
-                  <Games
-                    showAllResults={this.state.showAllResults}
-                    games={game}
-                  />
-                ))}
-              </div>
-            </div>
-          );
-        })}
+  return (
+    <div className="homePageWrap">
+      <div className="allTeamsWrap">
+        <AllTeams />
       </div>
-    );
-  }
+      <div className="allgameswrap">
+        {data.length !== 0 &&
+          data.map((gameDay, index) => (
+            <GameDay gameDay={gameDay} key={index} />
+          ))}
+      </div>
+    </div>
+  );
 }
 
 export default HomePage;

@@ -11,16 +11,22 @@
       flex-direction: column;
       padding-bottom: 50px;
       width: 25%; }
+      @media screen and (max-width: 1300px) {
+        .gameday .gameWrapper .game {
+          width: 33.3333%; } }
+      @media screen and (max-width: 1024px) {
+        .gameday .gameWrapper .game {
+          width: 50%; } }
       .gameday .gameWrapper .game .top {
         position: relative;
         display: flex;
-        justify-content: center;
-        align-items: flex-end; }
+        justify-content: center; }
         .gameday .gameWrapper .game .top .resultwrap {
           display: flex;
           justify-content: center;
           align-items: center;
-          flex-direction: column; }
+          flex-direction: column;
+          min-width: 75px; }
           .gameday .gameWrapper .game .top .resultwrap a {
             margin-top: 34px; }
         .gameday .gameWrapper .game .top .hometeam,
@@ -28,9 +34,15 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: space-between;
           height: 100%;
           width: 50%; }
+          .gameday .gameWrapper .game .top .hometeam .team-logo,
+          .gameday .gameWrapper .game .top .awayteam .team-logo {
+            background-image: url(../../Assets/images/sprite-big.png);
+            background-repeat: no-repeat;
+            background-size: 100px 3100px;
+            height: 100px;
+            width: 100px; }
           .gameday .gameWrapper .game .top .hometeam span,
           .gameday .gameWrapper .game .top .awayteam span {
             display: block;

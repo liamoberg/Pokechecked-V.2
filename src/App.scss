@@ -6,12 +6,28 @@
 }
 
 .container {
-  width: 1740px;
+  width: 1440px;
   margin: 0 auto;
   position: relative;
 
   @include md {
     width: 1200px;
+  }
+
+  @include mq-1300 {
+    width: 1100px;
+  }
+
+  @include mq-1199 {
+    width: 1000px;
+  }
+
+  @include mq-1100 {
+    width: 924px;
+  }
+
+  @include mq-1024 {
+    width: 80%;
   }
 }
 

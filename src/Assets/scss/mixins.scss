@@ -1,73 +1,100 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 @mixin unstyled-list {
-    padding:0;
-    margin:0;
-    list-style:none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 @mixin menu-big {
-    font-size:2.6rem;
-    font-weight:600;
-    line-height:31px;
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 31px;
 }
 
 @mixin standard-bg {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @mixin absolute-center {
-    position: absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin filler {
-    position: absolute;
-    left:0;
-    top:0;
-    height: 100%;
-    width:100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 
-@mixin standard-btn {
-    font-size:1.3rem;
-    line-height:16px;
-    text-transform:uppercase;
-    padding-top:7px;
-    padding-bottom:7px;
-    padding-left:18px;
-    padding-right:19px;
-    font-weight:700;
-    border:1px solid #FFF;
-    border-radius:20px;
-    color:$white;
-    transition: all .3s ease;
+// @mixin standard-btn {
+//   font-size: 1.3rem;
+//   line-height: 16px;
+//   text-transform: uppercase;
+//   padding-top: 7px;
+//   padding-bottom: 7px;
+//   padding-left: 18px;
+//   padding-right: 19px;
+//   font-weight: 700;
+//   border: 1px solid #fff;
+//   border-radius: 20px;
+//   color: $white;
+//   transition: all 0.3s ease;
 
-    &:hover {
-        background-color:#FFF;
-        color:$violet;
-    }
-}
+//   &:hover {
+//     background-color: #fff;
+//     color: $violet;
+//   }
+// }
 
 // Media query variables
 
-$lg : 1740px;
-$md : 1440px;
-$sm : 1200px;
-$tablet: 1024px;
+$lg: 1740px;
+$md: 1440px;
+$mq-1300: 1300px;
+$sm: 1200px;
+$mq-1199: 1199px;
+$mq-1100: 1100px;
+$mq-1024: 1024px;
 
 @mixin lg {
-    @media screen and (max-width:$lg) {
-        @content;
-    }
+  @media screen and (max-width: $lg) {
+    @content;
+  }
 }
 
 @mixin md {
-    @media screen and (max-width:$md) {
-        @content;
-    }
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin mq-1300 {
+  @media screen and (max-width: $mq-1300) {
+    @content;
+  }
+}
+
+@mixin mq-1199 {
+  @media screen and (max-width: $mq-1199) {
+    @content;
+  }
+}
+
+@mixin mq-1100 {
+  @media screen and (max-width: $mq-1100) {
+    @content;
+  }
+}
+
+@mixin mq-1024 {
+  @media screen and (max-width: $mq-1024) {
+    @content;
+  }
 }

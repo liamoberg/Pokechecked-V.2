@@ -14,11 +14,59 @@
 
     .left-side,
     .right-side {
+      position: relative;
       width: 50%;
       display: flex;
 
+      .team-logo {
+        background-image: url(../../../Assets/images/sprite-big.png);
+        height: 100px;
+        width: 100px;
+        margin-bottom: 10px;
+        @include standard-bg;
+      }
+
+      .divider-one {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) translateX(100%);
+        height: 60%;
+        width: 30px;
+        border-bottom: 1px solid #5c469a;
+        border-top: 1px solid #5c469a;
+        border-right: 1px solid #5c469a;
+
+        &:after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%) translateX(100%);
+          height: 1px;
+          width: 30px;
+          background-color: #5c469a;
+        }
+      }
+
+      .final {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          margin-bottom: 10px;
+        }
+
+        span {
+          font-family: $font-alt;
+        }
+      }
+
       .four,
-      .two {
+      .two,
+      .one {
         display: flex;
         flex-direction: column;
 
@@ -29,16 +77,17 @@
             position: absolute;
             right: 0;
             top: 50%;
-            transform: translateY(-50%) translateX(calc(100% + 25px));
+            transform: translateY(-50%) translateX(calc(100% + 5px));
           }
 
           .top,
-          .bottom {
+          .bottom,
+          .one {
             display: flex;
             flex-direction: column;
             align-items: center;
             img {
-              max-width: 105px;
+              max-width: 70px;
               margin-bottom: 10px;
             }
 
@@ -51,9 +100,10 @@
       }
 
       .four {
-        margin-right: 120px;
+        margin-right: 60px;
         .game {
           margin-bottom: 40px;
+          min-width: 133px;
 
           .top {
             margin-bottom: 20px;
@@ -63,15 +113,87 @@
 
       .two {
         margin-top: 60px;
+        margin-right: 50px;
 
         .game {
           margin-bottom: 160px;
+          min-width: 118px;
+          min-height: 328px;
+
+          .divider-one {
+            height: 70%;
+          }
 
           &:last-child {
             margin-bottom: 0;
           }
           .top {
-            margin-bottom: 185px;
+            margin-bottom: 145px;
+          }
+        }
+      }
+
+      .one {
+        margin-top: 175px;
+
+        .game {
+          min-width: 118px;
+          min-height: 585px;
+          .top {
+            margin-bottom: 400px;
+          }
+
+          .divider-one {
+            height: 82%;
+          }
+        }
+      }
+    }
+
+    .left-side {
+      .final {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -125%);
+      }
+    }
+
+    .right-side {
+      flex-direction: row-reverse;
+
+      .final {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, 0%);
+      }
+
+      .four {
+        margin-right: 0;
+        margin-left: 60px;
+      }
+
+      .two {
+        margin-right: 0;
+        margin-left: 60px;
+      }
+
+      .divider-one {
+        right: auto;
+        left: 0;
+        transform: translateY(-50%) translateX(-100%) rotate(180deg);
+      }
+
+      .four,
+      .two,
+      .one {
+        .game {
+          svg {
+            right: auto;
+            left: 0;
+            transform: translateX(calc(-100% - 25px)) translateY(-50%)
+              rotate(180deg);
           }
         }
       }

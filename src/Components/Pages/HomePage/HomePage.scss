@@ -1,0 +1,42 @@
+// @import "../../../Assets/scss/variables.scss";
+// @import "../../../Assets/scss/mixins.scss";
+// @import "../../../Assets/scss/fonts.scss";
+
+// .divider {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: space-between;
+//   margin-bottom: 40px;
+
+//   .line {
+//     width: 80%;
+//     border: 1px solid $violet;
+//     opacity: 0.7;
+
+//     @include md {
+//       width: 920px;
+//     }
+
+//     @include mq-1300 {
+//       width: 770px;
+//     }
+
+//     @include mq-1199 {
+//       width: 700px;
+//     }
+
+//     @include mq-1100 {
+//       width: 620px;
+//     }
+
+//     @include mq-1024 {
+//       width: 65%;
+//     }
+//   }
+
+//   .date {
+//     font-family: $font-alt;
+//     font-size: 1.8rem;
+//   }
+// }
